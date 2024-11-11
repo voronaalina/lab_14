@@ -21,9 +21,9 @@ class TextExtractor:
             if html:
                 soup = BeautifulSoup(html, 'html.parser')
                 text = soup.get_text(separator="\n").strip()
-                with open(str(i) + ".txt", 'w', encoding='utf-8') as output_file:
+                with open('c:\\lab14\\' + str(i) + ".txt", 'w', encoding='utf-8') as output_file:
                     output_file.write(text)
                     print("текст з " + url + " збережено у " + str(i) + ".txt")
 
-extractor = TextExtractor('c://lab14//webpages.txt')
+extractor = TextExtractor('c:\\lab14\\webpages.txt')
 extractor.extract_text()
